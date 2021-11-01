@@ -1,1 +1,3 @@
 # SmarthomeAndroid
+
+Smarthome kotlin app 
