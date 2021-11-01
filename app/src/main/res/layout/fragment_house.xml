@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="houseViewModel"
+            type="com.ipleiria.estg.meicm.arcismarthome.ui.house.HouseViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/lb_no_rooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/there_are_no_rooms"
+            android:textColor="@color/ARCILightBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <ExpandableListView
+            android:id="@+id/expandable_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:context=".ui.house.HouseFragment" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:contentDescription="@string/desc_float_button"
+            android:focusable="true"
+            app:backgroundTint="@color/ARCIBlue"
+            app:fabCustomSize="50dp"
+            app:fabSize="auto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="25dp"
+            app:srcCompat="@drawable/ic_add_solid_24dp" />
+
+        <Button
+            android:id="@+id/btn_room"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/layout_button_corner"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="@string/room"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/ARCIBlue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_add"
+            app:layout_constraintEnd_toStartOf="@+id/btn_add"
+            app:layout_constraintTop_toTopOf="@+id/btn_add"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_s_a"
+            android:layout_width="125dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/layout_button_corner"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="@string/s_a"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/ARCIBlue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_room"
+            app:layout_constraintEnd_toStartOf="@+id/btn_room"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_room"
+            tools:ignore="RtlSymmetry,SmallSp"
+            tools:text="Sensor/Actuator" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

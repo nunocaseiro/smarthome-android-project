@@ -1,0 +1,193 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ARCI</string>
+    <string name="app_long_name">Acesso Remoto a Casas Inteligentes</string>
+    <string name="app_slogan" tools:ignore="TypographyEllipsis">link yourself to home ...</string>
+
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="title_vehicles">Vehicles</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_settings">Settings</string>
+
+
+    <!-- Alerts -->
+    <string name="tst_fill_the_inputs">Please fill all the inputs</string>
+    <string name="fill_the_inputs_and_gpio_must">Please fill all the inputs and gpio must be between 1 and 40 inclusive</string>
+    <string name="qst_delete">Do you really want to delete</string>
+    <string name="attention">ATTENTION</string>
+    <string name="att_room_delete">All sensors/actuators in this room will also be deleted</string>
+    <string name="att_delete_recover">You will not be able to recover any data</string>
+    <string name="qst_logout">Do you really want to logout account</string>
+    <string name="inf_delete_user">If so, the user will be notified by email</string>
+
+
+    <!-- Utils -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="create">Create</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="submit">Submit</string>
+    <string name="loading">Loading . . .</string>
+    <string name="not_assigned">Not assigned</string>
+    <string name="lb_percentage">%</string>
+    <string name="lb_celsius">ºC</string>
+    <string name="lb_delete_home"><u>Delete home</u></string>
+
+
+    <!-- Descriptions -->
+    <string name="desc_logo">ARCI logo</string>
+    <string name="desc_weather_icon">Weather icon</string>
+    <string name="desc_humidity_icon">Humidity icon</string>
+    <string name="desc_wind_icon">Wind icon</string>
+    <string name="desc_s_a_icon">S/A icon</string>
+    <string name="desc_search_icon">Search icon</string>
+    <string name="desc_favorite_icon">Favorite icon</string>
+    <string name="desc_edit_icon">Pencil icon</string>
+    <string name="desc_logout_icon">Logout icon</string>
+    <string name="desc_delete_icon">Delete icon</string>
+    <string name="desc_read_icon">Read icon</string>
+    <string name="desc_photo_icon">Photo icon</string>
+    <string name="desc_float_button">Float button</string>
+    <string name="desc_notification_image">Notification image</string>
+    <string name="desc_profile_image">Profile image</string>
+    <string name="game_view_content_description">Game view</string>
+
+
+    <!-- Errors -->
+    <string name="error_load_rooms">Couldn\'t load rooms</string>
+    <string name="error_load_sensors">Couldn\'t load sensors from the room</string>
+
+
+    <!-- Email -->
+    <string name="email_dear">Dear</string>
+
+    <string name="email_create_account_subject">ARCI-Smarthome: Welcome home!</string>
+    <string name="email_create_account_body_1">This email is intended to inform you that the administrator</string>
+    <string name="email_create_account_body_2">has created an account for you to enjoy the ARCI service. You are now associated with the home</string>
+    <string name="email_create_account_body_3">Login now in the APP with the following credentials and edit your profile</string>
+    <string name="email_create_account_body_4">Haven\'t installed the ARCI app on your Android smartphone yet</string>
+    <string name="email_create_account_body_5">Download now through this link: http://arci-smarthome.space </string>
+        <!---->
+    <string name="email_delete_account_subject">ARCI-Smarthome: Deleted account information</string>
+    <string name="email_delete_account_body_1">This email is intended to inform you that your account</string>
+    <string name="email_delete_account_body_2">once associated with the home</string>
+    <string name="email_delete_account_body_3">has been deleted the by administrator</string>
+        <!---->
+    <string name="email_change_account_role_subject">ARCI-Smarthome: Changed account role information</string>
+    <string name="email_change_account_role_body_1">This email is intended to inform you that your account</string>
+    <string name="email_change_account_role_body_2">associated with the home</string>
+    <string name="email_change_account_role_body_3">as suffer a role change</string>
+    <string name="email_change_account_role_body_4">You are now</string>
+    <string name="email_change_account_role_body_5">of this home</string>
+        <!-- -->
+    <string name="email_delete_home_subject">ARCI-Smarthome: Deleted home information</string>
+    <string name="email_delete_home_body_1">This email is intended to inform you that the home</string>
+    <string name="email_delete_home_body_2">once associated to you, has been deleted by the administrator</string>
+    <string name="email_delete_home_body_3">Therefore, you\'re account</string>
+    <string name="email_delete_home_body_4">has also been deleted</string>
+
+
+    <!-- Login and Register -->
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="create_new_home"><u>Want to create a new home?</u></string>
+    <string name="house_name">House name</string>
+    <string name="first_name">First Name</string>
+    <string name="password_confirmation">Password confirmation</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="home_key">Home key</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+
+
+    <!-- Dashboard -->
+    <string name="home">Home of</string>
+    <string name="welcome">Welcome home</string>
+    <string name="comma">,</string>
+    <string name="left_arrow"><![CDATA[<]]></string>
+    <string name="total_of_s_a_two_points">Total of sensors/actuators:</string>
+    <string name="number_of_rooms_two_points">Number of rooms:</string>
+    <string name="there_are_no_favorites">There are no favorites</string>
+
+
+    <!-- Room -->
+    <string name="room">Room</string>
+    <string name="there_are_no_rooms">There are no rooms</string>
+    <string name="create_room"><u>Create room</u></string>
+    <string name="edit_room"><u>Edit room</u></string>
+
+    <array name="room_types">
+        <item>Bedroom</item>
+        <item>Garage</item>
+        <item>Kitchen</item>
+        <item>Living Room</item>
+        <item>Bathroom</item>
+        <item>Other</item>
+    </array>
+
+
+    <!-- S/A -->
+    <string name="s_a">Sensor/Actuator</string>
+    <string name="there_are_no_devices">There are no devices</string>
+    <string name="create_device"><u>Create device</u></string>
+    <string name="edit_device"><u>Edit device</u></string>
+
+    <string name="name_two_points">Name:</string>
+    <string name="type_two_points">Type:</string>
+    <string name="room_two_points">Room:</string>
+    <string name="gpio_two_points">GPIO:</string>
+    <string name="status_two_points">Status:</string>
+    <string name="value_two_points">Value:</string>
+    <string name="actuator_two_points">Actuator:</string>
+    <string name="lb_limit">Limit</string>
+    <string name="temperature_two_points">Temperature:</string>
+    <string name="luminosity_two_points">Luminosity:</string>
+    <string name="auto_two_points">Auto:</string>
+
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="opened">Opened</string>
+    <string name="closed">Closed</string>
+
+
+    <!-- Vehicles -->
+    <string name="there_are_no_vehicles">There are no vehicles</string>
+    <string name="create_vehicle"><u>Create vehicle</u></string>
+    <string name="edit_vehicle"><u>Edit vehicle</u></string>
+
+    <string name="year">Year:</string>
+    <string name="brand">Brand:</string>
+    <string name="license_plate">License plate:</string>
+    <string name="model">Model:</string>
+
+
+    <!-- Notifications -->
+    <string name="status">Status:</string>
+    <string name="created_at">Created at:</string>
+    <string name="there_are_no_notifications">There are no notifications</string>
+
+
+    <!-- Settings -->
+    <string name="create_account"><u>Create account</u></string>
+    <string name="edit_account"><u>Edit account</u></string>
+
+    <string name="home_accounts"><u>Home Accounts</u></string>
+    <array name="roles">
+        <item>admin</item>
+        <item>user</item>
+        <item>privileged</item>
+    </array>
+
+    <string name="home_edit"><u>Home Edit</u></string>
+    <string name="latitude_two_points">Latitude:</string>
+    <string name="longitude_two_points">Longitude:</string>
+
+    <string name="old_password">Old password</string>
+    <string name="update_password">Update password</string>
+
+</resources>

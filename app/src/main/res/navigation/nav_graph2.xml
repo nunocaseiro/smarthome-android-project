@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ipleiria.estg.meicm.arcismarthome.ui.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_houseKey"
+            app:destination="@id/houseKey" />
+    </fragment>
+    <fragment
+        android:id="@+id/houseKey"
+        android:name="com.ipleiria.estg.meicm.arcismarthome.ui.register.HomeKeyFragment"
+        android:label="HouseKey" >
+        <action
+            android:id="@+id/action_houseKey_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_houseKey_to_registerHome"
+            app:destination="@id/registerHome" />
+        <action
+            android:id="@+id/action_houseKey_to_registerAccountFragment"
+            app:destination="@id/registerAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerHome"
+        android:name="com.ipleiria.estg.meicm.arcismarthome.ui.register.RegisterHomeFragment"
+        android:label="RegisterHome" >
+        <action
+            android:id="@+id/action_registerHome_to_registerAccountFragment"
+            app:destination="@id/registerAccountFragment" />
+        <action
+            android:id="@+id/action_registerHome_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerAccountFragment"
+        android:name="com.ipleiria.estg.meicm.arcismarthome.ui.register.RegisterEditAccountFragment"
+        android:label="fragment_register_account"
+        tools:layout="@layout/fragment_register_edit_account">
+        <action
+            android:id="@+id/action_registerAccountFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <argument
+            android:name="action"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_registerAccountFragment_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+</navigation>

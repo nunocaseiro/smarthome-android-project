@@ -1,0 +1,109 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewRoomEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.house.room.RoomAddEditFragment">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/manage_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/themeColor"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            tools:text="@string/edit_room" />
+
+        <ImageView
+            android:id="@+id/iv_room_icon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/desc_s_a_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_room"
+            app:srcCompat="@drawable/ic_house_solid_24dp" />
+
+        <TextView
+            android:id="@+id/lb_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/name_two_points"
+            android:textColor="@color/themeColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/lb_type"
+            app:layout_constraintTop_toBottomOf="@+id/iv_room_icon" />
+
+        <EditText
+            android:id="@+id/et_room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/themeColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lb_name"
+            app:layout_constraintStart_toEndOf="@+id/lb_name"
+            app:layout_constraintTop_toTopOf="@+id/lb_name" />
+
+        <TextView
+            android:id="@+id/lb_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/type_two_points"
+            android:textColor="@color/themeColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/lb_status"
+            app:layout_constraintTop_toBottomOf="@+id/lb_name" />
+
+        <Spinner
+            android:id="@+id/spin_room_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/lb_type"
+            app:layout_constraintEnd_toEndOf="@+id/et_room_name"
+            app:layout_constraintStart_toStartOf="@+id/et_room_name"
+            app:layout_constraintTop_toTopOf="@+id/lb_type" />
+
+        <TextView
+            android:id="@+id/lb_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/status_two_points"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lb_type" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

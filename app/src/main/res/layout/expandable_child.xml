@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="sensor"
+            type="com.ipleiria.estg.meicm.arcismarthome.models.Sensor" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_s_a_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/desc_s_a_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_no_icon_border_24dp" />
+
+        <TextView
+            android:id="@+id/tv_s_a_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{sensor.name}"
+            android:textAlignment="center"
+            android:textColor="@color/themeColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_s_a_icon"
+            app:layout_constraintTop_toTopOf="@+id/iv_s_a_icon" />
+
+        <TextView
+            android:id="@+id/tv_s_a_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{sensor.status}"
+            android:textColor="@color/themeColor"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_s_a_icon"
+            app:layout_constraintStart_toStartOf="@+id/tv_s_a_name" />
+
+        <TextView
+            android:id="@+id/tv_s_a_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:text="@{sensor.value.toString()}"
+            android:textColor="@color/themeColor"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_s_a_status"
+            app:layout_constraintStart_toEndOf="@+id/tv_s_a_status" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

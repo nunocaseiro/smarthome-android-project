@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.InputType" />
+
+        <variable
+            name="vehicleDetailViewModel"
+            type="com.ipleiria.estg.meicm.arcismarthome.ui.vehicles.vehicleDetail.VehicleDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.vehicles.vehicleDetail.VehicleDetail">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/manage_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_titleVehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{vehicleDetailViewModel.key == 0 ? @string/create_vehicle : @string/edit_vehicle}"
+            android:textColor="@color/themeColor"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+
+        <EditText
+            android:id="@+id/editTextBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:ems="10"
+            android:hint="@string/brand"
+            android:text="@{vehicleDetailViewModel.vehicle.brand.toString()}"
+            android:textColor="@color/themeColor"
+            app:layout_constraintEnd_toEndOf="@+id/tv_titleVehicle"
+            app:layout_constraintStart_toStartOf="@+id/tv_titleVehicle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_titleVehicle" />
+
+        <EditText
+            android:id="@+id/editTextModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:ems="10"
+            android:hint="@string/model"
+            android:text="@{vehicleDetailViewModel.vehicle.model.toString()}"
+            android:textColor="@color/themeColor"
+            app:layout_constraintEnd_toEndOf="@+id/editTextBrand"
+            app:layout_constraintStart_toStartOf="@+id/editTextBrand"
+            app:layout_constraintTop_toBottomOf="@+id/editTextBrand" />
+
+        <EditText
+            android:id="@+id/editTextLicense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:ems="10"
+            android:hint="@string/license_plate"
+            android:text="@{vehicleDetailViewModel.vehicle.licenseplate.toString()}"
+            android:textColor="@color/themeColor"
+            app:layout_constraintEnd_toEndOf="@+id/editTextModel"
+            app:layout_constraintStart_toStartOf="@+id/editTextModel"
+            app:layout_constraintTop_toBottomOf="@+id/editTextModel" />
+
+        <EditText
+            android:id="@+id/editTextYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/year"
+            android:inputType="number"
+            android:text="@{vehicleDetailViewModel.vehicle != null ? String.valueOf(vehicleDetailViewModel.vehicle.year) : ``}"
+            android:textColor="@color/themeColor"
+            app:layout_constraintEnd_toEndOf="@+id/editTextLicense"
+            app:layout_constraintStart_toStartOf="@+id/editTextLicense"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLicense" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.InputType" />
+
+        <variable
+            name="notificationDetailViewModel"
+            type="com.ipleiria.estg.meicm.arcismarthome.ui.notifications.notificationDetails.NotificationDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="notification_detail_fragment"
+        tools:context=".ui.notifications.notificationDetails.NotificationDetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lb_notification_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{notificationDetailViewModel.notification.notification}"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/themeColor"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="New vehicle detected" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="@+id/lb_notification_title"
+                app:layout_constraintStart_toStartOf="@+id/lb_notification_title"
+                app:layout_constraintTop_toBottomOf="@+id/lb_notification_title">
+
+                <TextView
+                    android:id="@+id/lb_license_plate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:text="@string/license_plate"
+                    android:textColor="@color/themeColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lb_license_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@{notificationDetailViewModel.notification.licensePlate}"
+                    android:textColor="@color/themeColor"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/lb_license_plate"
+                    app:layout_constraintStart_toEndOf="@+id/lb_license_plate"
+                    app:layout_constraintTop_toTopOf="@+id/lb_license_plate"
+                    tools:text="XQ33XQ" />
+
+                <TextView
+                    android:id="@+id/lb_status_vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/status"
+                    android:textColor="@color/themeColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/lb_license_plate"
+                    app:layout_constraintTop_toBottomOf="@+id/lb_license_plate" />
+
+                <TextView
+                    android:id="@+id/lb_state_vehicle_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(notificationDetailViewModel.notification.description.charAt(0)).toUpperCase() + notificationDetailViewModel.notification.description.substring(1)}"
+                    android:textColor="@{notificationDetailViewModel.notification.description.equals(`allowed`) ? @color/greenAccept : @color/redNotAccept }"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/lb_status_vehicle"
+                    app:layout_constraintStart_toStartOf="@+id/lb_license_data"
+                    app:layout_constraintTop_toTopOf="@+id/lb_status_vehicle"
+                    tools:text="Not allowed" />
+
+                <TextView
+                    android:id="@+id/lb_created"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/created_at"
+                    android:textColor="@color/themeColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/lb_status_vehicle"
+                    app:layout_constraintTop_toBottomOf="@+id/lb_status_vehicle" />
+
+                <TextView
+                    android:id="@+id/lb_created_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/themeColor"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/lb_state_vehicle_data"
+                    app:layout_constraintTop_toTopOf="@+id/lb_created"
+                    tools:text="2021-01-28 21:12" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/iv_notification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/desc_notification_image"
+                android:scaleType="fitCenter"
+                app:flow_verticalAlign="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

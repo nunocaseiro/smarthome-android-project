@@ -1,0 +1,6 @@
+include ':wearable'
+include ':app'
+rootProject.name = "ARCI SmartHome"
+
+include ':unityLibrary'
+project(':unityLibrary').projectDir=new File('arExport/unityLibrary')
