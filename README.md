@@ -1,3 +1,3 @@
 # SmarthomeAndroid
 
-A kotlin app that allows devices management in a smarthome in real time.  
+A kotlin app that allows real-time device management of a smarthome.
